@@ -21,29 +21,34 @@
   <%= javascript_tag do %>
     var playbutton = document.getElementById('play');
     playbutton.addEventListener('click', function() {
-
-      var random = Math.floor(Math.random() * 6);
-      switch(random) {
-        case 0:
-            document.querySelector('#audio').src = '/assets/綿引うんこ.m4a';
-            break;
-        case 1:
-            document.querySelector('#audio').src = '/assets/森泉うんこ.m4a';
-            break;
-        case 2:
-            document.querySelector('#audio').src = '/assets/押田うんこ.m4a';
-            break;
-        case 3:
-          document.querySelector('#audio').src = '/assets/根岸うんこ.m4a';
-          break;
-        case 4:
-          document.querySelector('#audio').src = '/assets/高久うんこ.m4a';
-          break;
-        case 5:
-          document.querySelector('#audio').src = '/assets/三宅うんこ.m4a';
-          break;
-      };
       audio.play();
     });
+
+    setInterval(
+      function() {
+        var random = Math.floor(Math.random() * 6);
+        switch(random) {
+          case 0:
+              document.querySelector('#audio').src = '/assets/綿引うんこ.m4a';
+              break;
+          case 1:
+              document.querySelector('#audio').src = '/assets/森泉うんこ.m4a';
+              break;
+          case 2:
+              document.querySelector('#audio').src = '/assets/押田うんこ.m4a';
+              break;
+          case 3:
+            document.querySelector('#audio').src = '/assets/根岸うんこ.m4a';
+            break;
+          case 4:
+            document.querySelector('#audio').src = '/assets/高久うんこ.m4a';
+            break;
+          case 5:
+            document.querySelector('#audio').src = '/assets/三宅うんこ.m4a';
+            break;
+        };
+      }
+      , 2000
+    )
   <% end %>
 </body>
