@@ -1,0 +1,27 @@
+<style type="text/css">
+  .audioButton {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+  }
+</style>
+
+<body>
+  <%= audio_tag('高久うんこ.m4a', id: 'audio') %>
+  <%= image_tag('うんこ君.gif', class: 'audioButton') %>
+  <%= javascript_tag do %>
+      document.querySelector('.audioButton').onclick = function () {
+        document.querySelector('#audio').play();
+      }
+
+      
+      
+      console.log(document.querySelector('#audio'));
+      
+    
+  <% end %>
+</body>
