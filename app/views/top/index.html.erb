@@ -41,9 +41,8 @@
           document.querySelector('#audio').src = '/assets/三宅うんこ.m4a';
           break;
       };
+      document.querySelector('#audio').load();
       document.querySelector('#audio').play();
-
-      alert('hoge');
     }
   <% end %>
 </body>
