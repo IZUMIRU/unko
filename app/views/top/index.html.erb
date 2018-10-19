@@ -14,7 +14,7 @@
   <%= audio_tag('高久うんこ.m4a', id: 'audio') %>
   <%= image_tag('うんこ君.gif', class: 'audioButton') %>
   <%= javascript_tag do %>
-      document.querySelector('.audioButton').touchstart = function () {
+      document.querySelector('.audioButton').onTouchStart = function () {
         var random = Math.floor(Math.random() * 6);
         switch(random) {
           case 0:
