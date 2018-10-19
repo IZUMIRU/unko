@@ -12,7 +12,12 @@
 </style>
 
 <body>
-  <%= audio_tag('高久うんこ.m4a', id: 'audio') %>
+  <%= audio_tag('高久うんこ.m4a', id: 'audio1') %>
+  <%= audio_tag('綿引うんこ.m4a', id: 'audio2') %>
+  <%= audio_tag('押田うんこ.m4a', id: 'audio3') %>
+  <%= audio_tag('根岸うんこ.m4a', id: 'audio4') %>
+  <%= audio_tag('森泉うんこ.m4a', id: 'audio5') %>
+  <%= audio_tag('三宅うんこ.m4a', id: 'audio6') %>
 
   <%= button_tag type: 'button', id: 'play' do %>
     <%= image_tag('うんこ君.gif', class: 'audioButton') %>
@@ -21,37 +26,27 @@
   <%= javascript_tag do %>
     var playbutton = document.getElementById('play');
     playbutton.addEventListener('click', function() {
-      audio.play();
-      setTimeout(
-        function() {
-          change_audio();
-        }
-        ,400
-      )
-    });
-
-    function change_audio() {
       var random = Math.floor(Math.random() * 6);
       switch(random) {
         case 0:
-            document.querySelector('#audio').src = '/assets/綿引うんこ.m4a';
+            audio1.play();
             break;
         case 1:
-            document.querySelector('#audio').src = '/assets/森泉うんこ.m4a';
+            audio2.play();1
             break;
         case 2:
-            document.querySelector('#audio').src = '/assets/押田うんこ.m4a';
+            audio3.play();1
             break;
         case 3:
-          document.querySelector('#audio').src = '/assets/根岸うんこ.m4a';
+          audio4.play();1
           break;
         case 4:
-          document.querySelector('#audio').src = '/assets/高久うんこ.m4a';
+          audio5.play();1
           break;
         case 5:
-          document.querySelector('#audio').src = '/assets/三宅うんこ.m4a';
+          audio6.play();1
           break;
       };
-    };
+    });
   <% end %>
 </body>
